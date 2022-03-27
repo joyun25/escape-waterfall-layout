@@ -1,0 +1,219 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* CSS Reset start */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  display: block;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* CSS Reset end */
+
+/* Bricklayer start */
+/* Bricklayer calculates its column sizes  from the `bricklayer-column-sizer` element. You can give it some width with media queries to make it responsive */
+@media screen and (min-width: 500px) {
+.bricklayer-column-sizer {
+  /* If page is greater than 300px, columns will be 20% wide. */
+  width: 100%;
+}
+}
+
+@media screen and (min-width: 800px) {
+.bricklayer-column-sizer {
+  /* If page is greater than 400px, columns will be 10% wide, which are more narrow. */
+  width: 50%;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.bricklayer-column-sizer {
+  /* If page is greater than 700px, columns will be 5% wide. That means there will be lots of columns */
+  width: 33%;
+}
+}
+
+.box {
+  margin: 10px 0;
+}
+
+/* Bricklayer end */
+
+/* layout start */
+/* * {outline: 1px solid red;} */
+.wrap {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    display: block;
+  }
+}
+
+.menu {
+  background-color: #ddd;
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    text-align: center;
+  }
+}
+
+.menu_container {
+  width: 100%;
+  margin: 150px 50px 0;
+}
+
+.menu_title {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 3px;
+}
+
+h2 {
+  color: #777;
+}
+
+.menu_item,
+.menu_info {
+  text-transform: uppercase;
+  margin-left: 35px;
+  margin-bottom: 80px;
+  color: #777;
+}
+
+@media (max-width: 800px) {
+  .menu_item,
+  .menu_info {
+    margin-left: 0;
+  }
+}
+
+.menu_item li,
+.menu_info li {
+  margin-bottom: 10px;
+}
+
+.menu_item a:hover,
+.menu_info a:hover {
+  color: #000;
+}
+
+.menu_item .active,
+.menu_info .active {
+  color: #000;
+}
+
+.content {
+  width: 80%;
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .content {
+    margin: 0 auto;
+  }
+}
+
+.content_container {
+  padding: 0 100px;
+}
+
+@media (max-width: 800px) {
+  .content_container {
+    padding: 30px;
+    margin: 50px 0 0;
+  }
+}
+
+/* animation */
+.bounce-in {
+  animation: bounce-in .5s;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
